@@ -1,0 +1,18 @@
+{
+  "name": "start-lit-element",
+  "version": "1.0.0",
+  "description": "start-lit-element",
+  "repository": "https://github.com/PolymerLabs/start-lit-element.git",
+  "main": "start-lit-element.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "The Polymer Authors",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "latest",
+    "@polymer/lit-element": "latest",
+    "@microfrontends/angular-web-component-project":"0.1.0",
+    "@microfrontends/vue-web-component-project":"0.1.0"
+  }
+}

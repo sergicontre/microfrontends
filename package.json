@@ -1,0 +1,10 @@
+{
+  "name": "micro-frontends-poc",
+  "author": "sergicontre",
+  "scripts": {
+    "bootstrap": "lerna bootstrap"
+  },
+  "devDependencies": {
+    "lerna": "^3.10.1"
+  }
+}
