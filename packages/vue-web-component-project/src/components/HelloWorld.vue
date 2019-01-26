@@ -25,9 +25,7 @@ export default {
       this.count++;
     },
     decrement () {
-      if(this.count > 0){
-        this.count-- ;
-      }
+      this.count-- ;
     }
   }
 }
@@ -40,7 +38,7 @@ export default {
    h1{
       font-size: 1.4em;
     }
-     button{
+   button{
     border: none;
     padding: 15px 32px;
     text-align: center;
