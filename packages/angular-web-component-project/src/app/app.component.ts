@@ -1,4 +1,4 @@
-import { Component, ViewEncapsulation, OnInit, ChangeDetectorRef } from '@angular/core'
+import { Component, ViewEncapsulation, ElementRef } from '@angular/core'
 
 @Component({
   selector: 'app-root',
@@ -6,27 +6,28 @@ import { Component, ViewEncapsulation, OnInit, ChangeDetectorRef } from '@angula
   styleUrls: ['./app.component.css'],
   encapsulation: ViewEncapsulation.Emulated,
 })
-export class AppComponent implements OnInit {
+export class AppComponent  {
   title = 'Angular 7'
   results: string[] = []
-  public counter : number = 0;
+  public value : number = 0;
 
-  constructor(private changeDetectorRef: ChangeDetectorRef) { }
-
-  ngOnInit() {
-    console.log('up and running!')
-  }
-  public onSearch(searchTerm): void {
-    console.log('search', searchTerm)
-    this.results.push(searchTerm)
-    this.changeDetectorRef.detectChanges()
-  }
+  constructor(private el: ElementRef) {}
 
   public increment(): void {
-    this.counter += 1
+    this.value += 1
+    this._valueChanged()
   }
   
   public decrement(): void {
-    this.counter -= 1;
+    this.value -= 1;
+    this._valueChanged();
+  }
+
+  _valueChanged(): void {
+    this.el.nativeElement
+      .dispatchEvent(new CustomEvent('value-changed', {
+        detail: this.value,
+        bubbles: true
+      }));
   }
 }
