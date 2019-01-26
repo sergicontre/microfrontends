@@ -1,14 +1,14 @@
 {
   "name": "@microfrontends/angular-web-component-project",
   "version": "0.1.0",
+  "main": "dist/my-angular-microapp.js",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "build:elements": "ng build --prod --output-hashing none && node build-elements.js"
+    "build": "ng build --prod --output-hashing none && node build-elements.js"
   },
   "private": true,
   "dependencies": {

@@ -1,13 +1,21 @@
 {
-  "shell": "src/start-lit-element.js",
+  "shell": "src/micro-frontends.js",
   "entrypoint": "index.html",
-  "fragments": ["src/lazy-element.js"],
+  "fragments": [
+  ],
   "npm": true,
   "moduleResolution": "node",
-  "sources": ["src/start-lit-element.js", "manifest/**", "manifest.json", "package.json"],
+  "sources": [
+    "manifest/**",
+    "manifest.json",
+    "package.json"
+  ],
   "extraDependencies": [
     "robots.txt",
-    "node_modules/@webcomponents/webcomponentsjs/**"
+    "node_modules/@webcomponents/webcomponentsjs/**",
+    "node_modules/@microfrontends/angular-web-component-project/dist/my-angular-microapp.js",
+    "node_modules/@microfrontends/vue-web-component-project/dist/my-vue-microapp.js",
+    "node_modules/@microfrontends/lit-web-component-project/dist/my-lit-microapp.js"
   ],
   "builds": [{
     "bundle": true,

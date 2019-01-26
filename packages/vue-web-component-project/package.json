@@ -1,6 +1,7 @@
 {
   "name": "@microfrontends/vue-web-component-project",
   "version": "0.1.0",
+  "main": "dist/my-vue-microapp.js",
   "private": true,
   "scripts": {
     "serve": "vue-cli-service serve",

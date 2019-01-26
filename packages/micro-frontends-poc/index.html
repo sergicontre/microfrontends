@@ -26,15 +26,12 @@
       waitFor(cb) { addEventListener('WebComponentsReady', cb) }
     }
     WebComponents.waitFor(async () => {
-      import('./src/my-lit-microapp.js');
+      import('./src/micro-frontends');
     });
   </script>
 
-  <script type="text/javascript" src="./node_modules/@microfrontends/angular-web-component-project/dist/my-angular-microapp.js"></script>
-  <script type="text/javascript" src="./node_modules/@microfrontends/vue-web-component-project/dist/my-vue-microapp.min.js"></script>
-
   <!-- Change stuff here for your app -->
-
+  
   <link rel="manifest" href="./manifest.json">
   <link rel="shortcut icon" href="/manifest/favicon.ico">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -214,15 +211,12 @@
           <figure></figure>
           <my-lit-microapp></my-lit-microapp>
         </div>
-
-
-
       </div>
     </section>
 
     <footer class="footer">
       <span><a href="httspans://github.com/sergicontre" target="_blank">@sergicontre</a></span>
-      <span><a href="httspans://github.com/jorgecasar" target="_blank">@jrgecasar</a></span>
+      <span><a href="httspans://github.com/jorgecasar" target="_blank">@jorgecasar</a></span>
     </footer>
   </div>
 
