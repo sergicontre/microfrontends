@@ -10,8 +10,7 @@ input {
     border: 1px solid hsla(0, 0%, 35%, 0.68);
 }
 
-button {
-
+button{
     border: none;
     padding: 15px 32px;
     text-align: center;
@@ -23,7 +22,11 @@ button {
     cursor: pointer;
     background-color: black;
     color: #fff;
-    width: 100%;
+}
+button + span{
+    display: inline-block;
+    font-weight: 700;
+    padding: .76em;
 
 }
 

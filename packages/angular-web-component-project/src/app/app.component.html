@@ -1,14 +1,7 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="angular-app-style">
-      <h1>Made with <span style="color:#e21010">♥</span> ️in {{ title }}</h1>
-  <input #search (keyup.enter)="onSearch(search.value); search.value = ''">
-  <button (click)="onSearch(search.value); search.value = ''">Add</button>
-
-
-  <div *ngIf="!results.length">
-    <p>Your results will show here</p>
-  </div>
-  <div *ngIf="results.length">
-    <p *ngFor="let result of results">{{result}}</p>
-  </div>
+  <h1>Made with <span style="color:#e21010">♥</span> ️in {{ title }}</h1>
+  <button (click)="increment()">+</button>
+  <span>{{ counter }}</span>
+  <button (click)="decrement()">-</button>  
 </div>

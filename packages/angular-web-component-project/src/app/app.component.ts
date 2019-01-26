@@ -9,6 +9,7 @@ import { Component, ViewEncapsulation, OnInit, ChangeDetectorRef } from '@angula
 export class AppComponent implements OnInit {
   title = 'Angular 7'
   results: string[] = []
+  public counter : number = 0;
 
   constructor(private changeDetectorRef: ChangeDetectorRef) { }
 
@@ -19,5 +20,13 @@ export class AppComponent implements OnInit {
     console.log('search', searchTerm)
     this.results.push(searchTerm)
     this.changeDetectorRef.detectChanges()
+  }
+
+  public increment(): void {
+    this.counter += 1
+  }
+  
+  public decrement(): void {
+    this.counter -= 1;
   }
 }
