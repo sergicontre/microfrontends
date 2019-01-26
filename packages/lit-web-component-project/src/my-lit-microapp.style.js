@@ -2,34 +2,31 @@ import { css } from 'lit-css';
 
 export const myLitMicroAppStyle = css`
 :host {
-    display: block;
-    color: var(--primary-color);
-    background: var(--primary-background-color);
-    --primary-color: var(--primary-color, #000);
-    --primary-background-color: var(--primary-background-color, #FFF);
-  }
-  h1{
+  display: block;
+}
+:host([hidden]) {
+  display: none;
+}
+h1 {
     font-size: 1.4em;
-  }
-  button{
+    margin: 1em 0;
+}
+button {
+    width: 3rem;
+    height: 3rem;
     border: none;
-    padding: 15px 32px;
     text-align: center;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    margin: 16px 0 !important;
-    text-decoration: none;
-    font-size: 1rem;
+    font-size: 2rem;
     cursor: pointer;
-    background-color: var(--primary-color, black);
-    color: var(--primary-background-color, #fff);
-  }
-  button + span {
+    background-color: var(--button-background-color);
+    color: var(--button-color);
+    font-weight: bold;
+}
+
+button + span {
     display: inline-block;
+    font-size: 2rem;
     font-weight: 700;
     padding: .76em;
-  }
-  :host([hidden]) {
-    display: none;
-  }
+}
 `;

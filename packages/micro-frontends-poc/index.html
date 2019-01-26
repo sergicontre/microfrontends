@@ -3,192 +3,46 @@
 <html lang="en">
 
 <head>
-  <title>start-lit-element</title>
-  <meta name="description" content="start-lit-element">
+  <title>Microfrontends</title>
+  <meta name="description" content="Microfrontends">
   <meta name="theme-color" content="#ffffff">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
-  <!-- Register service worker if supported. -->
-  <!--
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js');
-    }
-  </script>
-  -->
-
-  <!-- Load polyfills -->
-  <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js" defer></script>
-  <script src="https://unpkg.com/vue"></script>
-  <!-- Load components via WebComponents.waitFor -->
-  <script type="module">
-    window.WebComponents = window.WebComponents || {
-      waitFor(cb) { addEventListener('WebComponentsReady', cb) }
-    }
-    WebComponents.waitFor(async () => {
-      import('./src/micro-frontends');
-    });
-  </script>
-
   <!-- Change stuff here for your app -->
-  
   <link rel="manifest" href="./manifest.json">
   <link rel="shortcut icon" href="/manifest/favicon.ico">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta charset="UTF-8">
-  <style>
-    html,
-    body {
-      height: 100%;
-    }
-
-    body {
-      font-family: 'Raleway', sans-serif;
-      margin: 0;
-      background: radial-gradient(rgba(171, 171, 171, 0.25) 5.5%, transparent 6.5%), #f0f0f0;
-      background-size: 24px 24px;
-      background-position: 28px 20px;
-    }
-
-    a {
-      text-decoration: none;
-      color: #2196F3;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    h1 {
-      font-size: 1.4em;
-    }
-
-    button {
-      border: none;
-      padding: 15px 32px;
-      text-align: center;
-      -webkit-transition-duration: 0.4s;
-      transition-duration: 0.4s;
-      margin: 16px 0 !important;
-      text-decoration: none;
-      font-size: 1rem;
-      cursor: pointer;
-      background-color: #4CAF50;
-      color: #fff;
-    }
-
-    .wrapper {
-      min-height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .header,
-    .footer {
-      font-weight: 700;
-      background-color: rgba(193, 192, 193, 0.8);
-      font-size: 1.4rem;
-      color: rgba(0, 0, 0, 0.87);
-    }
-
-    .header {
-      min-height: 64px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .footer {
-      display: flex;
-      align-items: center;
-      font-weight: normal;
-      font-size: .94rem;
-      padding: .5em .25em;
-    }
-
-    .content {
-      display: flex;
-      flex: auto;
-      padding: 2em;
-
-    }
-
-    .columns {
-      display: grid;
-      width: 100%;
-      align-items: stretch;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-column-gap: 2em;
-    }
-
-    .columns>* {
-      background: rgba(193, 192, 193, 0.8);
-      min-height: 38vh;
-      border-width: 4px;
-      border-style: dotted;
-      padding: .5em;
-    }
-
-    svg {
-      position: absolute;
-      overflow: hidden;
-      width: 100%;
-      height: 100%;
-    }
-
-    figure {
-      position: relative;
-      overflow: hidden;
-      margin: 0;
-      width: 56px;
-      height: 56px;
-    }
-
-    .columns> :nth-child(1) {
-      border-color: green;
-    }
-
-    .columns> :nth-child(2) {
-      border-color: red;
-    }
-
-    .columns> :nth-child(3) {
-      border-color: yellow;
-    }
-
-    .columns> :nth-child(3) figure {
-      background: linear-gradient(315deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(315deg, #8FCDFF 0%, #2196F3 100%);
-    }
-
-    .pub-sub {
-      background: rgba(193, 192, 193, 0.4);
-      min-height: 80px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .footer span {
-      margin-right: 1rem
-    }
-  </style>
+  <link rel="stylesheet" href="./src/micro-frontends.css">
 </head>
 
 <body>
 
   <div class="wrapper">
-    <header class="header">Micro Apps ...</header>
-    <div class="pub-sub">
-      <p>datos</p>
-    </div>
+    <header class="header">Micro Apps</header>
+    <section class="config">
+      <div class="pub-sub">
+        <p>datos</p>
+      </div>
+      <div class="color-picker">
+        <label>
+          <input type="color" id="button-background-color" />
+          <span>button-background-color</span>
+        </label>
+        <label>
+          <input type="color" id="button-color" />
+          <span>button-color</span>
+        </label>
+      </div>
+    </section>
     <section class="content">
-
       <div class="columns">
         <div>
           <figure>
             <svg enable-background="new 0 0 2500 2165.1" viewBox="0 0 2500 2165.1" xmlns="http://www.w3.org/2000/svg">
               <path d="m1538.7 0-288.7 500-288.7-500h-961.3l1250 2165.1 1250-2165.1z" fill="#4dba87" />
-              <path d="m1538.7 0-288.7 500-288.7-500h-461.3l750 1299 750-1299z" fill="#435466" /></svg>
+              <path d="m1538.7 0-288.7 500-288.7-500h-461.3l750 1299 750-1299z" fill="#435466" />
+            </svg>
           </figure>
           <my-vue-microapp title="Vue"></my-vue-microapp>
         </div>
@@ -215,9 +69,21 @@
     </section>
 
     <footer class="footer">
-      <span><a href="httspans://github.com/sergicontre" target="_blank">@sergicontre</a></span>
-      <span><a href="httspans://github.com/jorgecasar" target="_blank">@jorgecasar</a></span>
+      <span><a href="https://github.com/sergicontre" target="_blank">@sergicontre</a></span>
+      <span><a href="https://github.com/jorgecasar" target="_blank">@jorgecasar</a></span>
     </footer>
   </div>
+  <!-- Load polyfills -->
+  <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js" defer></script>
+  <script src="https://unpkg.com/vue"></script>
+  <!-- Load components via WebComponents.waitFor -->
+  <script type="module">
+    window.WebComponents = window.WebComponents || {
+      waitFor(cb) { addEventListener('WebComponentsReady', cb) }
+    }
+    WebComponents.waitFor(async () => {
+      import('./src/micro-frontends');
+    });
+  </script>
 
 </body>

@@ -1,35 +1,22 @@
-input {
-  display: block;
-  border: 0;
-  box-shadow: none;
-  color: black;
-  font-size: inherit;
-  min-height: 30px;
-  width: 100%;
-  background-color: hsla(0, 0%, 100%, 0.91);
-    border: 1px solid hsla(0, 0%, 35%, 0.68);
+h1 {
+    font-size: 1.4em;
+    margin: 1em 0;
+}
+button {
+    width: 3rem;
+    height: 3rem;
+    border: none;
+    text-align: center;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: var(--button-background-color);
+    color: var(--button-color);
+    font-weight: bold;
 }
 
-button{
-    border: none;
-    padding: 15px 32px;
-    text-align: center;
-    -webkit-transition-duration: 0.4s;
-    transition-duration: 0.4s;
-    margin: 16px 0 !important;
-    text-decoration: none;
-    font-size: 1rem;
-    cursor: pointer;
-    background-color: var(--primary-color, black);
-    color: var(--primary-background-color, #fff);
-}
-button + span{
+button + span {
     display: inline-block;
+    font-size: 2rem;
     font-weight: 700;
     padding: .76em;
-
-}
-
-.angular-app-style {
-
 }

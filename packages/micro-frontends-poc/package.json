@@ -10,10 +10,10 @@
   "author": "The Polymer Authors",
   "license": "BSD-3-Clause",
   "dependencies": {
+    "@microfrontends/angular-web-component-project": "^0.1.0",
+    "@microfrontends/lit-web-component-project": "^0.1.0",
+    "@microfrontends/vue-web-component-project": "^0.1.0",
     "@webcomponents/webcomponentsjs": "^2.2.4",
-    "@microfrontends/angular-web-component-project":"^0.1.0",
-    "@microfrontends/vue-web-component-project":"^0.1.0",
-    "@microfrontends/lit-web-component-project":"^0.1.0",
     "rollup": "^0.64.1",
     "rollup-plugin-filesize": "^4.0.1",
     "rollup-plugin-node-resolve": "^3.4.0",
