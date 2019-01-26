@@ -21,13 +21,8 @@ export const myLitMicroAppStyle = css`
     text-decoration: none;
     font-size: 1rem;
     cursor: pointer;
-    background-color: var(--primary-color);
-    color: var(--primary-background-color);
-  }
-  button + span {
-    display: inline-block;
-    font-weight: 700;
-    padding: .76em;
+    background-color: var(--primary-color, black);
+    color: var(--primary-background-color, #fff);
   }
   :host([hidden]) {
     display: none;
