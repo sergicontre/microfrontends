@@ -3,6 +3,10 @@ import { css } from 'lit-css';
 export const myLitMicroAppStyle = css`
 :host {
     display: block;
+    color: var(--primary-color);
+    background: var(--primary-background-color);
+    --primary-color: var(--primary-color, #000);
+    --primary-background-color: var(--primary-background-color, #FFF);
   }
   h1{
     font-size: 1.4em;
@@ -17,10 +21,10 @@ export const myLitMicroAppStyle = css`
     text-decoration: none;
     font-size: 1rem;
     cursor: pointer;
-    background-color: black;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--primary-background-color);
   }
-  button + span{
+  button + span {
     display: inline-block;
     font-weight: 700;
     padding: .76em;

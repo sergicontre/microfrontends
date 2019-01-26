@@ -37,7 +37,7 @@ export class MyLitMicroApp extends LitElement {
   }
 
   _valueChanged() {
-    this.dispatchEvent(new CustomEvent('valueChange', { detail: this.value }));
+    this.dispatchEvent(new CustomEvent('value-changed', { detail: this.value }));
   }
 }
 
