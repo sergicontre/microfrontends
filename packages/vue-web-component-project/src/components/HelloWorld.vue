@@ -3,7 +3,7 @@
     <h1>Made with <span style="color:#e21010">♥</span> ️in {{ title }}</h1>
 
     <button v-on:click.prevent="increment">+</button>
-    <span>{{ count }}</span>
+    <span>{{ value }}</span>
     <button v-on:click.prevent="decrement">-</button>
   </div>
 </template>
@@ -17,28 +17,30 @@ export default {
   },
   data: ()=> {
     return {
-      count: 0
+      value: 0
     }
   },
   methods: {
     increment () {
-      this.count++;
+      this.value++;
+      this._valueChanged();
     },
     decrement () {
-      this.count-- ;
+      this.value-- ;
+      this._valueChanged();
+    },
+    _valueChanged() {
+      this.$emit('value-changed', this.value);    
     }
   }
 }
 </script>
 
 <style lang="css" scoped>
-  .vue-app-style {
-
-  }
-   h1{
+  h1{
       font-size: 1.4em;
     }
-   button{
+  button{
     border: none;
     padding: 15px 32px;
     text-align: center;
@@ -48,14 +50,13 @@ export default {
     text-decoration: none;
     font-size: 1rem;
     cursor: pointer;
-    background-color: black;
-    color: #fff;
-    }
-    button + span{
-display: inline-block;
-font-weight: 700;
-padding: .76em;
-
-    }
+    background-color: var(--primary-color, black);
+    color: var(--primary-background-color, #fff);
+  }
+  button + span{
+      display: inline-block;
+      font-weight: 700;
+      padding: .76em;
+  }
 </style>
 
