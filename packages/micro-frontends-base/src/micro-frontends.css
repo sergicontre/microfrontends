@@ -1,0 +1,128 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    margin: 0;
+    background: radial-gradient(rgba(171, 171, 171, 0.25) 5.5%, transparent 6.5%), #f0f0f0;
+    background-size: 24px 24px;
+    background-position: 28px 20px;
+    --button-background-color: #ffffff;
+    --button-color: #000000;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.header,
+.footer {
+    font-weight: 700;
+    background-color: rgba(193, 192, 193, 0.8);
+    font-size: 1.4rem;
+    color: rgba(0, 0, 0, 0.87);
+}
+
+.header {
+    min-height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    font-weight: normal;
+    font-size: .94rem;
+    padding: .5em .25em;
+}
+
+.content {
+    display: flex;
+    flex: auto;
+    padding: 2em;
+}
+
+.content > * {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+
+.content > [active] {
+    display: block;
+}
+
+.columns {
+    display: grid;
+    width: 100%;
+    align-items: stretch;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 2em;
+}
+
+.columns > * {
+    background: var(--button-background-color);
+    border-width: 4px;
+    border-style: dotted;
+    padding: .5em;
+    text-align: center;
+    border-color: var(--button-color);
+}
+
+svg {
+    width: 100%;
+}
+
+figure {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+}
+
+figure.lit {
+    background: linear-gradient(315deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(315deg, #8FCDFF 0%, #2196F3 100%);
+}
+
+.config {
+    display: grid;
+    align-items: stretch;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 2em;
+    background: rgba(193, 192, 193, 0.4);
+}
+.pub-sub {
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.color-picker {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+.footer span {
+    margin-right: 1rem
+}

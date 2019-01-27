@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<title>Microfrontends</title>
+	<meta name="description" content="Microfrontends">
+	<meta name="theme-color" content="#ffffff">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+	<!-- Change stuff here for your app -->
+	<link rel="manifest" href="./manifest.json">
+	<link rel="shortcut icon" href="/manifest/favicon.ico">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="./src/micro-frontends.css">
+</head>
+
+<body>
+	
+	<div class="wrapper">
+		<header class="header">
+			<a href="/">Micro Apps</a>
+		</header>
+		<section class="config">
+			<div class="pub-sub">
+				<p>datos</p>
+			</div>
+			<div class="color-picker">
+				<label>
+					<input type="color" id="button-background-color" />
+					<span>button-background-color</span>
+				</label>
+				<label>
+					<input type="color" id="button-color" />
+					<span>button-color</span>
+				</label>
+			</div>
+		</section>
+		<section id="main-content" class="content">
+			<article id="home"> 
+				<div class="columns">
+					<a href="vue">
+						<figure class="vue">
+							<svg enable-background="new 0 0 2500 2165" viewBox="0 0 2500 2165" xmlns="http://www.w3.org/2000/svg">
+								<path d="m1538.7 0-288.7 500-288.7-500h-961.3l1250 2165.1 1250-2165.1z" fill="#4dba87" />
+								<path d="m1538.7 0-288.7 500-288.7-500h-461.3l750 1299 750-1299z" fill="#435466" />
+							</svg>
+						</figure>
+					</a>
+					<a href="angular">
+						<figure class="angular">
+							<svg enable-background="new 0 0 256 270" viewBox="0 0 256 270" xmlns="http://www.w3.org/2000/svg"
+							preserveAspectRatio="xMinYMin meet">
+							<path d="M127.606.341L.849 44.95 20.88 211.022l106.86 58.732 107.412-59.528L255.175 44.16 127.606.341z"
+							fill="#B3B3B3" />
+							<path d="M242.532 53.758L127.31 14.466v241.256l96.561-53.441 18.66-148.523z" fill="#A6120D" />
+							<path d="M15.073 54.466l17.165 148.525 95.07 52.731V14.462L15.074 54.465z" fill="#DD1B16" />
+							<path d="M159.027 142.898L127.31 157.73H93.881l-15.714 39.305-29.228.54L127.31 23.227l31.717 119.672zm-3.066-7.467l-28.44-56.303-23.329 55.334h23.117l28.652.97z"
+							fill="#F2F2F2" />
+							<path d="M127.309 23.226l.21 55.902 26.47 55.377h-26.62l-.06 23.189 36.81.035 17.204 39.852 27.967.518-81.981-174.873z"
+							fill="#B3B3B3" /></svg>
+						</figure>
+					</a>
+					<a href="lit">
+						<figure class=lit></figure>
+					</a>
+				</div>
+			</article>
+			<article id="angular">
+				<h1>Angular</h1>
+			</article>
+			<article id="vue">
+				<h1>Vue</h1>
+			</article>
+			<article id="lit">
+				<h1>Lit</h1>
+			</article>
+		</section>
+			
+		<footer class="footer">
+			<span><a href="https://github.com/sergicontre" target="_blank">@sergicontre</a></span>
+			<span><a href="https://github.com/jorgecasar" target="_blank">@jorgecasar</a></span>
+		</footer>
+	</div>
+	<script type="module">
+		import('./src/micro-frontends');
+	</script>
+		
+</body>
+	
