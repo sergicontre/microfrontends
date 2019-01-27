@@ -98,7 +98,7 @@ figure {
 }
 
 .columns > :nth-child(3) {
-    border-color: yellow;
+    border-color: blue;
 }
 
 .columns > :nth-child(3) figure {

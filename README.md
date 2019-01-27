@@ -1,11 +1,12 @@
 # Micro Frontends PoC
 
-### Setup
+## Setup
 ```bash
 npm install
-npm run bootstrap
 npm run build
-npm start
 ```
+## Serve
 
+Base: `npm run serve:base`
+POC: `npm run serve:poc`
 
