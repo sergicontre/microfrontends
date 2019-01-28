@@ -1,17 +1,19 @@
-import { Component, ViewEncapsulation, ElementRef } from '@angular/core'
+import { Component, ViewEncapsulation, ElementRef, Input } from '@angular/core'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  encapsulation: ViewEncapsulation.Emulated,
+  encapsulation: ViewEncapsulation.Native,
 })
 export class AppComponent  {
   title = 'Angular 7'
   results: string[] = []
-  public value : number = 0;
+  @Input()
+  value : number = 0;
 
   constructor(private el: ElementRef) {}
+
 
   public increment(): void {
     this.value += 1

@@ -3,7 +3,7 @@
     <h1>Made with <span style="color:#e21010">♥</span> ️in {{ title }}</h1>
 
     <button v-on:click.prevent="increment">+</button>
-    <span>{{ value }}</span>
+    <span>{{ counter }}</span>
     <button v-on:click.prevent="decrement">-</button>
   </div>
 </template>
@@ -14,23 +14,32 @@ export default {
   props: {
     title: String,
     url: String,
+    value: {
+      type: Number,
+      default: 0
+    }
   },
   data: ()=> {
     return {
-      value: 0
+      counter: 0
+    }
+  },
+  watch: {
+    value: function () {
+      this.counter= this.value
     }
   },
   methods: {
     increment () {
-      this.value++;
+      this.counter++;
       this._valueChanged();
     },
     decrement () {
-      this.value-- ;
+      this.counter-- ;
       this._valueChanged();
     },
     _valueChanged() {
-      this.$emit('value-changed', this.value);    
+      this.$emit('value-changed', this.counter);    
     }
   }
 }
