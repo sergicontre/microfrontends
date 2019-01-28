@@ -33,7 +33,6 @@ litMicroApp.addEventListener('value-changed', (data)=>{
 
 
 PubSub.subscribe('value-channel').on((value)=> {
-    console.log('===>', value);
     vueMicroApp.value = value;
     angularMicroApp.value = value;
     litMicroApp.value = value;
