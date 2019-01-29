@@ -5,7 +5,7 @@ export class MyLitMicroApp extends LitElement {
 
   static get properties() {
     return {
-      message: { type: String },
+      title: { type: String },
       value: { type: Number }
     }
   }
@@ -13,13 +13,13 @@ export class MyLitMicroApp extends LitElement {
   constructor() {
     super();
     this.value = 0;
-    this.message = 'Lit Element'
+    this.title = 'Lit Element';
   }
 
   render() {
     return html`
     <style>${myLitMicroAppStyle}</style>
-    <h1>Made with <span style="color:#e21010">♥</span> ️in ${this.message}</h1>
+    <h1>Made with ❤️ ️in ${this.title}</h1>
     <button @click="${() => this.increment()}" aria-label="increment">+</button>
     <span>${this.value}</span>
     <button @click="${() => this.decrement()}" aria-label="decrement">-</button>

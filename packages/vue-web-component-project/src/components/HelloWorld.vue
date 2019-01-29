@@ -1,6 +1,6 @@
 <template>
   <div class="vue-app-style">
-    <h1>Made with <span style="color:#e21010">♥</span> ️in {{ title }}</h1>
+    <h1>Made with ❤️ ️in {{ title }}</h1>
 
     <button v-on:click.prevent="increment">+</button>
     <span>{{ counter }}</span>

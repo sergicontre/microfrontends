@@ -7,13 +7,12 @@ import { Component, ViewEncapsulation, ElementRef, Input } from '@angular/core'
   encapsulation: ViewEncapsulation.Native,
 })
 export class AppComponent  {
-  title = 'Angular 7'
-  results: string[] = []
+  @Input()
+  title = 'Angular'
   @Input()
   value : number = 0;
 
   constructor(private el: ElementRef) {}
-
 
   public increment(): void {
     this.value += 1
