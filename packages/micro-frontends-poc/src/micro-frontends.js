@@ -23,14 +23,17 @@ let litMicroApp = document.querySelector('my-lit-microapp');
 // Connect micro apps to pub/sub pattern (get custom events from microapps)
 vueMicroApp.addEventListener('value-changed', (data)=>{
     PubSub.publish('value-channel', data.detail[0]);
+    changeDataStyle();
 });
 
 angularMicroApp.addEventListener('value-changed', (data)=>{
     PubSub.publish('value-channel', data.detail);
+    changeDataStyle();
 });
 
 litMicroApp.addEventListener('value-changed', (data)=>{
     PubSub.publish('value-channel', data.detail);
+    changeDataStyle();
 });
 
 // Connect micro apps to pub/sub pattern (set values from pub/sub to microapps)
@@ -38,4 +41,11 @@ PubSub.subscribe('value-channel').on((value)=> {
     vueMicroApp.value = value;
     angularMicroApp.value = value;
     litMicroApp.value = value;
+    setTimeout(() => {
+        document.querySelector('#transfer').hidden = true;
+    }, 500);
 });
+
+const changeDataStyle = () => {
+    document.querySelector('#transfer').hidden = false;
+}
