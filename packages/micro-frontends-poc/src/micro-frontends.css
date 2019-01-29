@@ -241,6 +241,27 @@ h2 span {
   }
 }
 
-.footer span {
-  margin-right: 1rem;
+.footer span + span {
+margin-left: .25rem;
+}
+
+.logger{
+  position: absolute;
+    top: 10px;
+    left: 0;
+    width: 240px;
+}
+.config ul {
+  list-style: none;
+  overflow-y: scroll;
+  height: 5em;
+}
+
+.updated {
+  background: rgb(255, 217, 102);
+}
+
+small{
+  display: inline-block;
+  margin-right: .5rem;
 }
