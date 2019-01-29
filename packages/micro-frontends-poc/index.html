@@ -19,22 +19,24 @@
 <body>
 
   <div class="wrapper">
-    <header class="header">Micro Apps</header>
+    <header class="header" hidden>Micro Apps</header>
     <section class="config">
       <div class="pub-sub">
-        <p>Pub/Sub</p>
-        <div id="transfer" hidden>
-          Data
+        <div>
+        <h2><strong>Pub</strong><span class="iconPreview no-attribution" style="background-image: url(&quot;data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9JzMwMHB4JyB3aWR0aD0nMzAwcHgnICBmaWxsPSIjMDAwMDAwIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjEiIHg9IjBweCIgeT0iMHB4IiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMTAwIDEwMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PGc+PHBhdGggZD0iTTM2Ljc2Myw1MC42NjhIMTIuMjkxYy0wLjM2OSwwLTAuNjY4LTAuMjk5LTAuNjY4LTAuNjY4czAuMjk5LTAuNjY4LDAuNjY4LTAuNjY4aDI0LjQ3MmMwLjM2OSwwLDAuNjY4LDAuMjk5LDAuNjY4LDAuNjY4ICAgUzM3LjEzMiw1MC42NjgsMzYuNzYzLDUwLjY2OHoiPjwvcGF0aD48L2c+PGc+PHBhdGggZD0iTTg2Ljk2Niw1MC42NjhINjIuNDkzYy0wLjM2OSwwLTAuNjY4LTAuMjk5LTAuNjY4LTAuNjY4czAuMjk5LTAuNjY4LDAuNjY4LTAuNjY4aDI0LjQ3M2MwLjM2OSwwLDAuNjY4LDAuMjk5LDAuNjY4LDAuNjY4ICAgUzg3LjMzNSw1MC42NjgsODYuOTY2LDUwLjY2OHoiPjwvcGF0aD48L2c+PGc+PHBhdGggZD0iTTQ0LjQ4MSw1OC4zODdjLTQuNjI0LDAtOC4zODYtMy43NjMtOC4zODYtOC4zODdzMy43NjItOC4zODcsOC4zODYtOC4zODdjMC4zNjksMCwwLjY2OCwwLjMsMC42NjgsMC42NjggICBjMCwwLjM2OS0wLjI5OSwwLjY2OS0wLjY2OCwwLjY2OWMtMy44ODgsMC03LjA1LDMuMTYyLTcuMDUsNy4wNXMzLjE2Myw3LjA1LDcuMDUsNy4wNWMwLjM2OSwwLDAuNjY4LDAuMywwLjY2OCwwLjY2OSAgIEM0NS4xNDksNTguMDg3LDQ0Ljg1LDU4LjM4Nyw0NC40ODEsNTguMzg3eiI+PC9wYXRoPjwvZz48Zz48cGF0aCBkPSJNNTQuNzc0LDU4LjM4N2MtMC4zNjksMC0wLjY2OC0wLjMtMC42NjgtMC42NjhjMC0wLjM2OSwwLjI5OS0wLjY2OSwwLjY2OC0wLjY2OWMzLjg4OCwwLDcuMDUxLTMuMTYyLDcuMDUxLTcuMDUgICBzLTMuMTYzLTcuMDUtNy4wNTEtNy4wNWMtMC4zNjksMC0wLjY2OC0wLjMtMC42NjgtMC42NjljMC0wLjM2OCwwLjI5OS0wLjY2OCwwLjY2OC0wLjY2OGM0LjYyNSwwLDguMzg3LDMuNzYzLDguMzg3LDguMzg3ICAgUzU5LjM5OSw1OC4zODcsNTQuNzc0LDU4LjM4N3oiPjwvcGF0aD48L2c+PGc+PHBhdGggZD0iTTkwLjkxMiw1NC4xMzJjLTIuMjc5LDAtNC4xMzItMS44NTQtNC4xMzItNC4xMzFjMC0yLjI3OSwxLjg1NC00LjEzNCw0LjEzMi00LjEzNHM0LjEzMiwxLjg1NCw0LjEzMiw0LjEzNCAgIEM5NS4wNDQsNTIuMjc4LDkzLjE5MSw1NC4xMzIsOTAuOTEyLDU0LjEzMnogTTkwLjkxMiw0Ni45ODNjLTEuNjY0LDAtMy4wMTcsMS4zNTQtMy4wMTcsMy4wMThjMCwxLjY2MiwxLjM1MywzLjAxNSwzLjAxNywzLjAxNSAgIHMzLjAxNy0xLjM1MywzLjAxNy0zLjAxNUM5My45MjksNDguMzM3LDkyLjU3Niw0Ni45ODMsOTAuOTEyLDQ2Ljk4M3oiPjwvcGF0aD48L2c+PGc+PHBhdGggZD0iTTEyLjI5MSw1MC4wMDFjMCwxLjk3NC0xLjYwMSwzLjU3Mi0zLjU3NSwzLjU3MnMtMy41NzQtMS41OTktMy41NzQtMy41NzJjMC0xLjk3NywxLjYwMS0zLjU3NSwzLjU3NC0zLjU3NSAgIFMxMi4yOTEsNDguMDI0LDEyLjI5MSw1MC4wMDF6Ij48L3BhdGg+PHBhdGggZD0iTTguNzE2LDUzLjc2Yy0yLjA3MywwLTMuNzYtMS42ODctMy43Ni0zLjc1OWMwLTIuMDc0LDEuNjg3LTMuNzYyLDMuNzYtMy43NjJjMi4wNzQsMCwzLjc2MSwxLjY4OCwzLjc2MSwzLjc2MiAgIEMxMi40NzcsNTIuMDczLDEwLjc5LDUzLjc2LDguNzE2LDUzLjc2eiBNOC43MTYsNDYuNjExYy0xLjg2OCwwLTMuMzg4LDEuNTIxLTMuMzg4LDMuMzljMCwxLjg2NywxLjUyLDMuMzg3LDMuMzg4LDMuMzg3ICAgYzEuODY5LDAsMy4zODktMS41MiwzLjM4OS0zLjM4N0MxMi4xMDQsNDguMTMyLDEwLjU4NCw0Ni42MTEsOC43MTYsNDYuNjExeiI+PC9wYXRoPjwvZz48Zz48Y2lyY2xlIGN4PSI0OS4zMTUiIGN5PSI1MC4zMTMiIHI9IjMuNzk3Ij48L2NpcmNsZT48L2c+PC9zdmc+&quot;);"></span><strong>Sub</strong></h2>
+      </div>
+        <div id="transfer">
+          <span class="transfer"></span>
         </div>
       </div>
       <div class="color-picker">
         <label>
           <input type="color" id="button-background-color" />
-          <span>button-background-color</span>
+          <span>Background color</span>
         </label>
         <label>
           <input type="color" id="button-color" />
-          <span>button-color</span>
+          <span>Button- olor</span>
         </label>
       </div>
     </section>
