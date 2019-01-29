@@ -114,9 +114,16 @@ figure {
 }
 .pub-sub {
     min-height: 80px;
-    display: flex;
     align-items: center;
     justify-content: center;
+    background-color: #fa8072;
+    border: 2px dashed rgba(74, 74, 74, 0.85);
+    width: 270px;
+    border-radius: 2px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: .7rem;
+    padding: .6em;
 }
 
 .color-picker {
