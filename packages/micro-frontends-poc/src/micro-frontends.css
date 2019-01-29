@@ -15,7 +15,7 @@ body {
 
 a {
   text-decoration: none;
-  color: #2196F3;
+  color: #444;
 }
 
 a:hover {
@@ -45,10 +45,12 @@ a:hover {
 }
 
 .footer {
+
+
   display: flex;
   align-items: center;
   font-weight: normal;
-  font-size: .94rem;
+  font-size: .84rem;
   padding: .5em .25em;
 }
 
@@ -91,14 +93,17 @@ figure {
 
 .columns > :nth-child(1) {
   border-color: green;
+  background: rgb(147, 196, 125);
 }
 
 .columns > :nth-child(2) {
   border-color: red;
+  background: rgb(224, 102, 102);
 }
 
 .columns > :nth-child(3) {
   border-color: blue;
+  background: rgb(109, 158, 235);
 }
 
 .columns > :nth-child(3) figure {
@@ -140,8 +145,8 @@ h2 span {
 .pub-sub {
   align-items: center;
   justify-content: center;
-  background-color: #fa8072;
-  border: 2px dashed rgb(187, 31, 32);
+  background-color: #e6e5e4;
+  border: 2px dashed rgb(123, 123, 123);
   box-sizing: border-box;
   text-align: center;
   font-size: .72rem;
