@@ -22,6 +22,7 @@ let litMicroApp = document.querySelector('my-lit-microapp');
 
 // Connect micro apps to pub/sub pattern (get custom events from microapps)
 vueMicroApp.addEventListener('value-changed', (data) => {
+  // Vue dispatch event detail as array
   PubSub.publish('value-channel', data.detail[0]);
   //changeDataStyle();
   valueChanged(event.target, event.detail[0]);
