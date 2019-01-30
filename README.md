@@ -7,6 +7,6 @@ npm run build
 ```
 ## Serve
 
-Base: `npm run serve:base`
-POC: `npm run serve:poc`
+Base: `npm run start:base`
+POC: `npm run start:poc`
 
